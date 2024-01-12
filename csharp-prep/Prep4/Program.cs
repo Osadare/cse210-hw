@@ -5,13 +5,12 @@ class Program
     static void Main(string[] args)
     {
         List<int> numbers = new List<int>();
-        
-        // prompt the user to enter a list of numbers
+
+        // Prompt the user to enter a list of numbers
         int userNumber = -1;
         while (userNumber != 0)
         {
-            Console.Write("Enter a list of number (type 0 to quit): ");
-            
+            Console.Write("Enter a list of numbers (type 0 to quit): ");
             string userResponse = Console.ReadLine();
             userNumber = int.Parse(userResponse);
             if (userNumber != 0)
@@ -30,7 +29,7 @@ class Program
 
         float average = ((float)sum) / numbers.Count;
         Console.WriteLine($"The average is: {average}");
- 
+
         int max = numbers[0];
 
         foreach (int number in numbers)
@@ -41,6 +40,6 @@ class Program
             }
         }
 
-        
+        Console.WriteLine($"The largest number is: {max}");
     }
 }
