@@ -1,9 +1,20 @@
+ //Polymorphism with Exercise Tracking project.I have made progress in designing the base class for activities and implementing derived classes for running,cycling and swimming. 
 using System;
 
-class Program
+
+public class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation4 World!");
-    }
-}
+        List<Activity> activities = new List<Activity>();
+
+        activities.Add(new Running(new DateTime(2024, 2, 14), 30, 3.0));
+        activities.Add(new Cycling(new DateTime(2024, 1, 29), 30, 6.0));
+        activities.Add(new Swimming(new DateTime(2024, 1, 20), 30, 10));
+
+        foreach (Activity activity in activities)
+        {
+            Console.WriteLine(activity.GetSummary());
+        }
+    } 
+}    
